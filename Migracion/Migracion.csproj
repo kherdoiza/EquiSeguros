@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="201611101533_Create_PersonaDir.cs" />
     <Compile Include="201611101551_Create_Persona.cs" />
+    <Compile Include="201611101645_Create_TipoPersona.cs" />
+    <Compile Include="201611101649_Create_TipoDocumento.cs" />
+    <Compile Include="201611101651_Create_EstadoCivil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

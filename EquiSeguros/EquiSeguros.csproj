@@ -180,7 +180,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Direccion.cs" />
     <Compile Include="Models\EntityManager\AseguradoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

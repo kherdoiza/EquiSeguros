@@ -1,4 +1,4 @@
-﻿using EquiSeguros.Models;
+﻿using EquiSeguros.Models.BussinesEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,17 @@ namespace EquiSeguros.Controllers
         [HttpGet]
         public ActionResult DireccionForm()
         {
+            List<Pais> paises = new List<Pais>();
+            Pais pais = new Pais();
+
+            pais.CodPais = 1;
+            pais.TxtDescripcion = "Ecuador";
+            paises.Add(pais);
+            pais.CodPais = 2;
+            pais.TxtDescripcion = "Colombia";
+            paises.Add(pais);
+
+            ViewBag.Paises = paises;
             return View();
         }
 
@@ -29,7 +40,6 @@ namespace EquiSeguros.Controllers
             {
                 return View();
             }
-
         }
     }
 }
