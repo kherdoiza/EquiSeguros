@@ -167,6 +167,9 @@
     </Compile>
     <Compile Include="Models\BussinesEntity\Asegurado.cs" />
     <Compile Include="Models\BussinesEntity\Direccion.cs" />
+    <Compile Include="Models\BussinesEntity\Pais.cs" />
+    <Compile Include="Models\BussinesEntity\Provincia.cs" />
+    <Compile Include="Models\BussinesEntity\TipoDireccion.cs" />
     <Compile Include="Models\DB\EquiSegurosModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
