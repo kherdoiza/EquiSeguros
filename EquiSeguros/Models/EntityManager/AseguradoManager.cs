@@ -1,15 +1,18 @@
-﻿using System;
+﻿using EquiSeguros.Models.BussinesEntity;
+using EquiSeguros.Models.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+//using EquiSeguros.Models.
 using System.Web;
 
 namespace EquiSeguros.Models.EntityManager
 {
     public class AseguradoManager
     {
-        public void CreaPersona(Asegurado persona)
+        public void CrearPersona(Asegurado persona)
         {
-            //using (EquiSegurosModel manager)
+           //using(EquiSegurosModel db = new EquiSegurosModel() )
         }
     }
 }

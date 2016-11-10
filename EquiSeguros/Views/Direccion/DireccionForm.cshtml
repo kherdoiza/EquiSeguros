@@ -9,9 +9,37 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>DireccionForm</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
 </head>
 <body>
-    <div> 
+    <div class="panel panel-success"> 
+<div class="panel-heading text-center"><h4>Cotizacion</h4></div>
+<div class="panel-body">
+    @using (Html.BeginForm())
+            {
+        @Html.ValidationSummary()
+
+        <div class="form-group">
+            <label>Marca:</label>
+            @Html.DropDownListFor(x => x.Marca, new[] {
+                    new SelectListItem() {Text = "CHEVROLET", Value = "1" },
+                    new SelectListItem() {Text = "MAZDA", Value = "2" },
+                    }, "Escoja una Opción", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Calle Principal:</label>
+            @Html.TextBoxFor(x => x.CallePrincipal, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Calle Secundaria:</label>
+            @Html.TextBoxFor(x => x.Callesecundaria, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Referencia:</label>
+            @Html.TextBoxFor(x => x.Referencia, new { @class = "form-control" })
+        </div>
     </div>
 </body>
 </html>
