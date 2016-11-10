@@ -145,7 +145,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BussinesEntity\Asegurado.cs" />
+    <Compile Include="Models\BussinesEntity\EstadoCivil.cs" />
+    <Compile Include="Models\BussinesEntity\TipoDoc.cs" />
+    <Compile Include="Models\BussinesEntity\TipoPersona.cs" />
     <Compile Include="Models\EntityManager\AseguradoManager.cs" />
+    <Compile Include="Models\EntityManager\EstadoCivilManager.cs" />
+    <Compile Include="Models\EntityManager\TipoDocManager.cs" />
+    <Compile Include="Models\EntityManager\TipoPerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +164,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Asegurado\AseguradoForm.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Asegurado\DirPrueba.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

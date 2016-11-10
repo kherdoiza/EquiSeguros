@@ -19,54 +19,70 @@
             {
                 @Html.ValidationSummary()
 
-                <div class="form-group">
-                    <label>Código:</label>
-                    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+                <div class="wrapper wrapper-content animated fadeInRight">
+                    <div class="row">
+                        <div class="col-sm-2 b-r">
+
+                                <div class="form-group">
+                                    <label>Código:</label>
+                                    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tipo de documento:</label>
+                                    @Html.DropDownListFor(x => x.TipoDocumento, new SelectList(ViewBag.tipos, "Id", "Descripcion"), "Seleccione")
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Apellido Paterno:</label>
+                                    @Html.TextBoxFor(x => x.ApellidoPaterno, new { @class = "form-control" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nombres:</label>
+                                    @Html.TextBoxFor(x => x.Nombres, new { @class = "form-control" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>EstadoCivil:</label>
+                                    @Html.DropDownListFor(x => x.EstadoCivil, new SelectList(ViewBag.estados, "Id", "Descripcion"), "Seleccione")
+                                </div>
+
+                        </div>
+                        <div class="col-sm-2">
+     
+
+                                <div class="form-group">
+                                    <label>Tipo Persona:</label>
+                                    @Html.DropDownListFor(x => x.TipoPersona, new SelectList(ViewBag.tippersonas, "Id", "Descripcion"), "Seleccione")
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Documento:</label>
+                                    @Html.TextBoxFor(x => x.Documento, new { @class = "form-control" })
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label>Apellido Materno:</label>
+                                    @Html.TextBoxFor(x => x.ApellidoMaterno, new { @class = "form-control" })
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label>Fecha de nacimiento:</label>
+                                    @Html.TextBoxFor(x => x.FechaNacimiento, new { @class = "form-control" })
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Siguiente</strong></button>
+                                </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Tipo Persona:</label>
-                    @Html.TextBoxFor(x => x.TipoPersona, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>Tipo de documento:</label>
-                    @Html.TextBoxFor(x => x.TipoDocumento, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>Documento:</label>
-                    @Html.TextBoxFor(x => x.Documento, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>Apellido Paterno:</label>
-                    @Html.TextBoxFor(x => x.ApellidoPaterno, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>Apellido Materno:</label>
-                    @Html.TextBoxFor(x => x.ApellidoMaterno, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>Nombres:</label>
-                    @Html.TextBoxFor(x => x.Nombres, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>Fecha de nacimiento:</label>
-                    @Html.TextBoxFor(x => x.FechaNacimiento, new { @class = "form-control" })
-                </div>
-
-                <div class="form-group">
-                    <label>EstadoCivil:</label>
-                    @Html.TextBoxFor(x => x.EstadoCivil, new { @class = "form-control" })
-                </div>
-
-                <div class="text-center">
-                    <input class="btn btn-success" type="submit" value="Aceptar" />
-                </div>
             }
         </div>
     </div>
