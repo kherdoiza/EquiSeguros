@@ -1,4 +1,4 @@
-﻿@model EquiSeguros.Models.Direccion
+﻿@model EquiSeguros.Models.BussinesEntity.Direccion
 @{
     Layout = null;
 }
@@ -22,11 +22,8 @@
         @Html.ValidationSummary()
 
         <div class="form-group">
-            <label>Marca:</label>
-            @Html.DropDownListFor(x => x.Marca, new[] {
-                    new SelectListItem() {Text = "CHEVROLET", Value = "1" },
-                    new SelectListItem() {Text = "MAZDA", Value = "2" },
-                    }, "Escoja una Opción", new { @class = "form-control" })
+            <label>Pais:</label>
+            @Html.DropDownListFor(x => x.Pais, new SelectList(ViewBag.Pais.CodPais,ViewBag.Pais.TxtDescripcion), "Escoja una Opción", new { @class = "form-control" })
         </div>
         <div class="form-group">
             <label>Calle Principal:</label>
