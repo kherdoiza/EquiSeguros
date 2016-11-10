@@ -1,4 +1,4 @@
-﻿using EquiSeguros.Models;
+﻿using EquiSeguros.Models.BussinesEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,6 @@ namespace EquiSeguros.Controllers
             {
                 return View();
             }
-
         }
     }
 }
