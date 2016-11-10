@@ -8,7 +8,6 @@
         <EntityTypeShape EntityType="CursoMVCModel.Pais" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CursoMVCModel.Persona" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CursoMVCModel.Provincia" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CursoMVCModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CursoMVCModel.TipoDireccion" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CursoMVCModel.tmarca" Width="1.5" PointX="5.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="CursoMVCModel.tmodelo" Width="1.5" PointX="8" PointY="5.875" IsExpanded="true" />
