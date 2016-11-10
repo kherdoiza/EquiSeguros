@@ -13,6 +13,17 @@ namespace EquiSeguros.Controllers
         [HttpGet]
         public ActionResult DireccionForm()
         {
+            List<Pais> paises = new List<Pais>();
+            Pais pais = new Pais();
+
+            pais.CodPais = 1;
+            pais.TxtDescripcion = "Ecuador";
+            paises.Add(pais);
+            pais.CodPais = 2;
+            pais.TxtDescripcion = "Colombia";
+            paises.Add(pais);
+
+            ViewBag.Paises = paises;
             return View();
         }
 
