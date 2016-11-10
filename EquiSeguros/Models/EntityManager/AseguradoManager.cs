@@ -7,5 +7,9 @@ namespace EquiSeguros.Models.EntityManager
 {
     public class AseguradoManager
     {
+        public void CreaPersona(Asegurado persona)
+        {
+            using ()
+        }
     }
 }
