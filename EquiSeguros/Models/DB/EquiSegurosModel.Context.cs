@@ -28,9 +28,10 @@ namespace EquiSeguros.Models.DB
         public virtual DbSet<Pais> Pais { get; set; }
         public virtual DbSet<Persona> Persona { get; set; }
         public virtual DbSet<Provincia> Provincia { get; set; }
-        public virtual DbSet<TipoDireccion> TipoDireccion { get; set; }
         public virtual DbSet<tmarca> tmarca { get; set; }
         public virtual DbSet<tmodelo> tmodelo { get; set; }
         public virtual DbSet<PersonaDir> PersonaDir { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<VersionInfo> VersionInfo { get; set; }
     }
 }
