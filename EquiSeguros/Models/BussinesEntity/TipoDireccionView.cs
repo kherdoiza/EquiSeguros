@@ -5,7 +5,7 @@ using System.Web;
 
 namespace EquiSeguros.Models.BussinesEntity
 {
-    public class TipoDireccion
+    public class TipoDireccionView
     {
         public int CodTipoDireccion { get; set; }
         public string TxtDescripcion { get; set; }

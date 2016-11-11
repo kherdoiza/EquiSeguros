@@ -179,7 +179,7 @@
     <Compile Include="Models\BussinesEntity\Persona.cs" />
     <Compile Include="Models\BussinesEntity\PersonaDir.cs" />
     <Compile Include="Models\BussinesEntity\Provincia.cs" />
-    <Compile Include="Models\BussinesEntity\TipoDireccion.cs" />
+    <Compile Include="Models\BussinesEntity\TipoDireccionView.cs" />
     <Compile Include="Models\BussinesEntity\TipoDoc.cs" />
     <Compile Include="Models\BussinesEntity\TipoPersona.cs" />
     <Compile Include="Models\DB\EquiSeguroModel.Context.cs">
@@ -222,7 +222,11 @@
       <DependentUpon>EquiSeguroModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntityManager\AseguradoManager.cs" />
+    <Compile Include="Models\EntityManager\DireccionManager.cs" />
     <Compile Include="Models\EntityManager\EstadoCivilManager.cs" />
+    <Compile Include="Models\EntityManager\PaisManager.cs" />
+    <Compile Include="Models\EntityManager\ProvinciaManager.cs" />
+    <Compile Include="Models\EntityManager\TipoDirManager.cs" />
     <Compile Include="Models\EntityManager\TipoDocManager.cs" />
     <Compile Include="Models\EntityManager\TipoPerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
