@@ -15,13 +15,13 @@ namespace EquiSeguros.Controllers
         {
             List<Pais> paises = new List<Pais>();
             Pais pais = new Pais();
-
             pais.CodPais = 1;
             pais.TxtDescripcion = "Ecuador";
             paises.Add(pais);
-            pais.CodPais = 2;
-            pais.TxtDescripcion = "Colombia";
-            paises.Add(pais);
+            Pais pais1 = new Pais();
+            pais1.CodPais = 2;
+            pais1.TxtDescripcion = "Colombia";
+            paises.Add(pais1);
 
             ViewBag.Paises = paises;
             return View();
