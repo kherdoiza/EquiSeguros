@@ -18,7 +18,7 @@
         <div class="panel-heading text-center"><h4>Cotizacion</h4></div>
         <div class="panel-body">
     @using (Html.BeginForm())
-            {
+    {
         @Html.ValidationSummary()
 
         <div class="form-group">
@@ -37,6 +37,7 @@
                 <label>Referencia:</label>
                 @Html.TextBoxFor(x => x.Referencia, new { @class = "form-control" })
             </div>
+        }
         </div>
     </div>
 </body>
