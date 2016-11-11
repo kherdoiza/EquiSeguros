@@ -1,4 +1,5 @@
 ﻿using EquiSeguros.Models.BussinesEntity;
+using EquiSeguros.Models.EntityManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,11 +41,10 @@ namespace EquiSeguros.Controllers
             provincias.Add(provincia1);
             ViewBag.Provincias = provincias;
 
-            List<TipoDireccion> tiposDireccion = new List<TipoDireccion>();
-            TipoDireccion tipoDireccion = new TipoDireccion();
-            tipoDireccion.CodTipoDireccion = 1;
-            tipoDireccion.TxtDescripcion = "Domicilio";
-            tiposDireccion.Add(tipoDireccion);
+            TipoDirManager a = new TipoDirManager(); 
+
+            List<TipoDireccionView> tiposDireccion = a.ConsultarTiposDoc();
+            
             ViewBag.TipoDireccion = tiposDireccion;
 
             ViewBag.Asegurado = asegurado;
