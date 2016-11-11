@@ -20,10 +20,21 @@
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary()
-
+        <div class="form-group">
+            <label>IdPersona:</label>
+            @Html.TextBoxFor(x => x.IdPersona, new { @class = "form-control" })
+        </div>
         <div class="form-group">
             <label>Pais:</label>
             @Html.DropDownListFor(x => x.Pais, new SelectList(ViewBag.Paises,"CodPais","TxtDescripcion"), "Escoja una Opción", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Provincias:</label>
+            @Html.DropDownListFor(x => x.Provincia, new SelectList(ViewBag.Provincias, "CodProvincia", "TxtDescripcion"), "Escoja una Opción", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Tipo Direccion:</label>
+            @Html.DropDownListFor(x => x.TipoDireccion, new SelectList(ViewBag.TipoDireccion, "CodTipoDireccion", "TxtDescripcion"), "Escoja una Opción", new { @class = "form-control" })
         </div>
             <div class="form-group">
                 <label>Calle Principal:</label>
@@ -37,7 +48,10 @@
                 <label>Referencia:</label>
                 @Html.TextBoxFor(x => x.Referencia, new { @class = "form-control" })
             </div>
-        }
+            <div>
+                <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Guardar</strong></button>
+            </div>
+    }
         </div>
     </div>
 </body>
