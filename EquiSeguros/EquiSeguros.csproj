@@ -174,14 +174,14 @@
     </Compile>
     <Compile Include="Models\BussinesEntity\Asegurado.cs" />
     <Compile Include="Models\BussinesEntity\Direccion.cs" />
-    <Compile Include="Models\BussinesEntity\EstadoCivil.cs" />
+    <Compile Include="Models\BussinesEntity\EstadoCivilView.cs" />
     <Compile Include="Models\BussinesEntity\Pais.cs" />
     <Compile Include="Models\BussinesEntity\Persona.cs" />
     <Compile Include="Models\BussinesEntity\PersonaDir.cs" />
     <Compile Include="Models\BussinesEntity\Provincia.cs" />
     <Compile Include="Models\BussinesEntity\TipoDireccionView.cs" />
     <Compile Include="Models\BussinesEntity\TipoDoc.cs" />
-    <Compile Include="Models\BussinesEntity\TipoPersona.cs" />
+    <Compile Include="Models\BussinesEntity\TipoPersonaView.cs" />
     <Compile Include="Models\DB\EquiSeguroModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

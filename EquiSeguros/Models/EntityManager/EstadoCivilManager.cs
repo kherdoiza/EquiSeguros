@@ -1,4 +1,5 @@
 ﻿using EquiSeguros.Models.BussinesEntity;
+using EquiSeguros.Models.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,34 +9,23 @@ namespace EquiSeguros.Models.EntityManager
 {
     public class EstadoCivilManager
     {
-        public List<EstadoCivil> ConsultarEstadosCivil()
+        public List<EstadoCivilView> ConsultarEstadosCivil()
         {
-            //using (CotizadorEntitiesDb db = new CotizadorEntitiesDb())
-            //{
-            List<EstadoCivil> datos = new List<EstadoCivil>();
-            // List<tmarca> lista = db.tmarca.ToList();
-            //lista.ForEach(x =>
-            //{
-            EstadoCivil tipo = new EstadoCivil();
-            tipo.Id = 1;
-            tipo.Descripcion = "Soltero";
-            datos.Add(tipo);
+            using (Entities db = new Entities())
+            {
+                List<EstadoCivilView> resultado = new List<EstadoCivilView>();
+                List<EstadoCivil> lista = db.EstadoCivil.ToList();
 
-            EstadoCivil tipo2 = new EstadoCivil();
-            tipo2.Id = 2;
-            tipo2.Descripcion = "Casado";
-            datos.Add(tipo2);
+                lista.ForEach(x =>
+                {
+                    EstadoCivilView estadoCivil = new EstadoCivilView();
+                    estadoCivil.Id = x.Id;
+                    estadoCivil.Descripcion = x.Descripcion;
+                    resultado.Add(estadoCivil);
+                });
 
-            EstadoCivil tipo3 = new EstadoCivil();
-            tipo3.Id = 3;
-            tipo3.Descripcion = "Divorciado";
-            datos.Add(tipo3);
-
-            //});
-            return datos;
-
-            //}
-
+                return resultado;
+            }
         }
     }
 }
