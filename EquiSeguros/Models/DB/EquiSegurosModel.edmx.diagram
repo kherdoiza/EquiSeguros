@@ -12,6 +12,10 @@
         <AssociationConnector Association="CursoMVCModel.FK_Provincia_Pais" ManuallyRouted="false" />
         <AssociationConnector Association="CursoMVCModel.FK_PersonaDir_Persona" ManuallyRouted="false" />
         <AssociationConnector Association="CursoMVCModel.FK_PersonaDir_Provincia" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CursoMVCModel.EstadoCivil" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CursoMVCModel.TipoDireccion" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CursoMVCModel.TipoDocumento" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CursoMVCModel.TipoPersona" Width="1.5" PointX="2.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
