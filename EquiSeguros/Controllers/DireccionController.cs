@@ -13,6 +13,9 @@ namespace EquiSeguros.Controllers
         [HttpGet]
         public ActionResult DireccionForm()
         {
+            Asegurado asegurado = new Asegurado();
+            asegurado.Id = 1;
+
             List<Pais> paises = new List<Pais>();
             Pais pais = new Pais();
             pais.CodPais = 1;
@@ -44,7 +47,10 @@ namespace EquiSeguros.Controllers
             tiposDireccion.Add(tipoDireccion);
             ViewBag.TipoDireccion = tiposDireccion;
 
-            return View();
+            ViewBag.Asegurado = asegurado;
+            Direccion dir = new Direccion();
+            dir.IdPersona = asegurado.Id;
+            return View(dir);
         }
 
         [HttpPost]
