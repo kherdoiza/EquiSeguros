@@ -168,6 +168,8 @@
     <Compile Include="Models\BussinesEntity\Asegurado.cs" />
     <Compile Include="Models\BussinesEntity\Direccion.cs" />
     <Compile Include="Models\BussinesEntity\Pais.cs" />
+    <Compile Include="Models\BussinesEntity\Persona.cs" />
+    <Compile Include="Models\BussinesEntity\PersonaDir.cs" />
     <Compile Include="Models\BussinesEntity\Provincia.cs" />
     <Compile Include="Models\BussinesEntity\TipoDireccion.cs" />
     <Compile Include="Models\DB\EquiSegurosModel.Context.cs">
@@ -186,9 +188,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Views\Direccion\DireccionForm.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Asegurado\AseguradoForm.cshtml" />

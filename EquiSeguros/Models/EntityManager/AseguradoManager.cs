@@ -10,13 +10,11 @@ namespace EquiSeguros.Models.EntityManager
 {
     public class AseguradoManager
     {
-<<<<<<< HEAD
 
-=======
         public void CrearPersona(Asegurado persona)
         {
-           //using(EquiSegurosModel db = new EquiSegurosModel() )
+            //using(EquiSegurosModel db = new EquiSegurosModel() )
         }
->>>>>>> origin/master
+
     }
 }

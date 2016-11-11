@@ -9,10 +9,11 @@
 
 namespace EquiSeguros.Models.DB
 {
+    using BussinesEntity;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class CursoMVCEntities : DbContext
     {
         public CursoMVCEntities()
@@ -28,10 +29,6 @@ namespace EquiSeguros.Models.DB
         public virtual DbSet<Pais> Pais { get; set; }
         public virtual DbSet<Persona> Persona { get; set; }
         public virtual DbSet<Provincia> Provincia { get; set; }
-        public virtual DbSet<tmarca> tmarca { get; set; }
-        public virtual DbSet<tmodelo> tmodelo { get; set; }
         public virtual DbSet<PersonaDir> PersonaDir { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<VersionInfo> VersionInfo { get; set; }
     }
 }
