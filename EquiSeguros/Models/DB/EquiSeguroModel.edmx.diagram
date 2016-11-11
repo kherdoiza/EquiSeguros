@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8066f5a396de482f9970af151b931519" Name="Diagram1">
+        <EntityTypeShape EntityType="EquiSegurosModel.EstadoCivil" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.Pais" Width="1.5" PointX="6.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.Persona" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.PersonaDir" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.Provincia" Width="1.5" PointX="6.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.TipoDireccion" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.TipoDocumento" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquiSegurosModel.TipoPersona" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="EquiSegurosModel.fk_Persona_EstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="EquiSegurosModel.FK_Provincia_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="EquiSegurosModel.fk_Persona_TipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="EquiSegurosModel.fk_Persona_TipoPersona" ManuallyRouted="false" />
+        <AssociationConnector Association="EquiSegurosModel.FK_PersonaDir_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="EquiSegurosModel.FK_PersonaDir_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="EquiSegurosModel.FK_PersonaDir_TipoDireccion" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
