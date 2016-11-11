@@ -127,18 +127,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <EntityDeploy Include="Models\DB\EquiSegurosModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EquiSegurosModel1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DB\EquiSegurosModel.edmx.diagram">
-      <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Models\DB\EquiSegurosModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EquiSegurosModel.Context1.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -168,18 +157,6 @@
     <Compile Include="Models\BussinesEntity\TipoDireccion.cs" />
     <Compile Include="Models\BussinesEntity\TipoDoc.cs" />
     <Compile Include="Models\BussinesEntity\TipoPersona.cs" />
-    <Compile Include="Models\DB\EquiSegurosModel.Context.cs" />
-    <Compile Include="Models\DB\EquiSegurosModel.Context1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EquiSegurosModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DB\EquiSegurosModel.Designer.cs" />
-    <Compile Include="Models\DB\EquiSegurosModel1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\EntityManager\AseguradoManager.cs" />
     <Compile Include="Models\EntityManager\EstadoCivilManager.cs" />
     <Compile Include="Models\EntityManager\TipoDocManager.cs" />
@@ -207,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\DB\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
