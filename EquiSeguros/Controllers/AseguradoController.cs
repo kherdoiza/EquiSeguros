@@ -36,14 +36,15 @@ namespace EquiSeguros.Controllers
         {
             if (ModelState.IsValid)
             {
-                //AseguradoManager manager = new AseguradoManager();
-                //manager.CrearAsegurado(asegurado);
+                AseguradoManager manager = new AseguradoManager();
+                manager.CrearAsegurado(asegurado);
+
                 return View("DirPrueba");
 
             }
             else
             {
-                return View("DirPrueba");
+                return View();
             }
         }
 

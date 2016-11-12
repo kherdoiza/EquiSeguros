@@ -176,7 +176,6 @@
     <Compile Include="Models\BussinesEntity\Direccion.cs" />
     <Compile Include="Models\BussinesEntity\EstadoCivilView.cs" />
     <Compile Include="Models\BussinesEntity\PaisView.cs" />
-    <Compile Include="Models\BussinesEntity\Persona.cs" />
     <Compile Include="Models\BussinesEntity\PersonaDir.cs" />
     <Compile Include="Models\BussinesEntity\Provincia.cs" />
     <Compile Include="Models\BussinesEntity\TipoDireccionView.cs" />
