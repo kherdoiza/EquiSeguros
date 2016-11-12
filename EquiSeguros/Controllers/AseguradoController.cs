@@ -42,10 +42,7 @@ namespace EquiSeguros.Controllers
                 int cod = manager.CrearAsegurado(asegurado);
                 asegurado.Id = cod;
                 //return View("../Direccion/DireccionForm");
-                return RedirectToAction("DireccionForm", "Direccion", new { asegurado = asegurado });
-
-               
-
+                return RedirectToAction("DireccionForm", "Direccion", asegurado);
                 
 
             }
