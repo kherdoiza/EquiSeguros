@@ -12,11 +12,21 @@ namespace EquiSeguros.Controllers
     public class DireccionController : Controller
     {
         [HttpGet]
-        public ActionResult DireccionForm()
+        public ActionResult DireccionForm(Asegurado asegurado)
         {
-            Asegurado asegurado = new Asegurado();
-            asegurado.Id = 1;
+            //Asegurado asegurado = new Asegurado();
+            //asegurado.Id = 2;
 
+            CargarCatalogos();
+
+            ViewBag.Asegurado = asegurado;
+            Direccion dir = new Direccion();
+            dir.IdPersona = asegurado.Id;
+            return View(dir);
+        }
+
+        public void CargarCatalogos()
+        {
             List<PaisView> paises = new List<PaisView>();
             paises = new PaisManager().ConsultaPais();
             /*Pais pais = new Pais();
@@ -42,17 +52,12 @@ namespace EquiSeguros.Controllers
             provincia1.TxtDescripcion = "Guayas";
             provincias.Add(provincia1);*/
             ViewBag.Provincias = provincias;
-            
 
-            TipoDirManager a = new TipoDirManager(); 
+
+            TipoDirManager a = new TipoDirManager();
             List<TipoDireccionView> tiposDireccion = a.ConsultarTiposDoc();
-            
-            ViewBag.TipoDireccion = tiposDireccion;
 
-            ViewBag.Asegurado = asegurado;
-            Direccion dir = new Direccion();
-            dir.IdPersona = asegurado.Id;
-            return View(dir);
+            ViewBag.TipoDireccion = tiposDireccion;
         }
 
         [HttpPost]
@@ -62,7 +67,8 @@ namespace EquiSeguros.Controllers
             {
                 DireccionManager manager = new DireccionManager();
                 manager.InsertarDireccion(direccion);
-                return View(direccion);
+                CargarCatalogos();
+                return View();
             }
             else
             {

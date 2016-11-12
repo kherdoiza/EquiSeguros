@@ -39,6 +39,7 @@ namespace EquiSeguros.Models.EntityManager
                 {
                     BussinesEntity.ProvinciaView provincia = new BussinesEntity.ProvinciaView();
                     provincia.CodPais = x.CodPais;
+                    provincia.CodProvincia = x.CodProvincia;
                     provincia.TxtDescripcion = x.TxtDescripcion;
                     resultado.Add(provincia);
                 });
