@@ -1,4 +1,5 @@
 ﻿using EquiSeguros.Models.BussinesEntity;
+using EquiSeguros.Models.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,32 +11,21 @@ namespace EquiSeguros.Models.EntityManager
     {
         public List<TipoDoc> ConsultarTiposDoc()
         {
-            //using (CotizadorEntitiesDb db = new CotizadorEntitiesDb())
-            //{
-            List<TipoDoc> datos = new List<TipoDoc>();
-            // List<tmarca> lista = db.tmarca.ToList();
-            //lista.ForEach(x =>
-            //{
-            TipoDoc tipo = new TipoDoc();
-            tipo.Id = 1;
-            tipo.Descripcion = "Cédula";
-            datos.Add(tipo);
+            using (Entities db = new Entities())
+            {
+                List<TipoDoc> resultado = new List<TipoDoc>();
+                List<TipoDocumento> lista = db.TipoDocumento.ToList();
 
-            TipoDoc tipo2 = new TipoDoc();
-            tipo2.Id = 2;
-            tipo2.Descripcion = "Ruc";
-            datos.Add(tipo2);
+                lista.ForEach(x =>
+                {
+                    TipoDoc tipoDocumento = new TipoDoc();
+                    tipoDocumento.Id = x.Id;
+                    tipoDocumento.Descripcion = x.Descripcion;
+                    resultado.Add(tipoDocumento);
+                });
 
-            TipoDoc tipo3 = new TipoDoc();
-            tipo3.Id = 3;
-            tipo3.Descripcion = "Pasaporte";
-            datos.Add(tipo3);
-
-            //});
-            return datos;
-
-            //}
-
+                return resultado;
+            }
         }
     }
 }

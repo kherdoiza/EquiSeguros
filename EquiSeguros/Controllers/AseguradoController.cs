@@ -37,17 +37,21 @@ namespace EquiSeguros.Controllers
             if (ModelState.IsValid)
             {
                 AseguradoManager manager = new AseguradoManager();
-                //manager.CrearAsegurado(asegurado);
-                asegurado.Id = 1;
-                asegurado.Nombres = "Karla";
 
+                
+                manager.CrearAsegurado(asegurado);
                 //return View("../Direccion/DireccionForm");
                 return RedirectToAction("DireccionForm", "Direccion", new { asegurado = asegurado });
+
+               
+
+                
 
             }
             else
             {
-                return RedirectToAction("DireccionForm", "Direccion", new { asegurado = asegurado });
+                return View();
+
             }
         }
 

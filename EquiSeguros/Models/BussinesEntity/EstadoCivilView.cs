@@ -5,7 +5,9 @@ using System.Web;
 
 namespace EquiSeguros.Models.BussinesEntity
 {
-    public class Persona
+    public class EstadoCivilView
     {
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
     }
 }

@@ -174,14 +174,13 @@
     </Compile>
     <Compile Include="Models\BussinesEntity\Asegurado.cs" />
     <Compile Include="Models\BussinesEntity\Direccion.cs" />
-    <Compile Include="Models\BussinesEntity\EstadoCivil.cs" />
-    <Compile Include="Models\BussinesEntity\Pais.cs" />
-    <Compile Include="Models\BussinesEntity\Persona.cs" />
+    <Compile Include="Models\BussinesEntity\EstadoCivilView.cs" />
+    <Compile Include="Models\BussinesEntity\PaisView.cs" />
     <Compile Include="Models\BussinesEntity\PersonaDir.cs" />
     <Compile Include="Models\BussinesEntity\Provincia.cs" />
-    <Compile Include="Models\BussinesEntity\TipoDireccion.cs" />
+    <Compile Include="Models\BussinesEntity\TipoDireccionView.cs" />
     <Compile Include="Models\BussinesEntity\TipoDoc.cs" />
-    <Compile Include="Models\BussinesEntity\TipoPersona.cs" />
+    <Compile Include="Models\BussinesEntity\TipoPersonaView.cs" />
     <Compile Include="Models\DB\EquiSeguroModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,7 +221,11 @@
       <DependentUpon>EquiSeguroModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntityManager\AseguradoManager.cs" />
+    <Compile Include="Models\EntityManager\DireccionManager.cs" />
     <Compile Include="Models\EntityManager\EstadoCivilManager.cs" />
+    <Compile Include="Models\EntityManager\PaisManager.cs" />
+    <Compile Include="Models\EntityManager\ProvinciaManager.cs" />
+    <Compile Include="Models\EntityManager\TipoDirManager.cs" />
     <Compile Include="Models\EntityManager\TipoDocManager.cs" />
     <Compile Include="Models\EntityManager\TipoPerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
