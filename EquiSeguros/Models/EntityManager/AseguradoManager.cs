@@ -9,7 +9,7 @@ namespace EquiSeguros.Models.EntityManager
 {
     public class AseguradoManager
     {
-        public void CrearAsegurado(Asegurado asegurado)
+        public int CrearAsegurado(Asegurado asegurado)
         {
             using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
@@ -24,6 +24,7 @@ namespace EquiSeguros.Models.EntityManager
                 persona.EstadoCivil = asegurado.EstadoCivil;
                 db.Persona.Add(persona);
                 db.SaveChanges();
+                return persona.Id;
             }
         }
 
