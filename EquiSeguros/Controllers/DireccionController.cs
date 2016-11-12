@@ -18,18 +18,20 @@ namespace EquiSeguros.Controllers
             asegurado.Id = 1;
 
             List<Pais> paises = new List<Pais>();
-            Pais pais = new Pais();
+            paises = new PaisManager().ConsultaPais();
+            /*Pais pais = new Pais();
             pais.CodPais = 1;
             pais.TxtDescripcion = "Ecuador";
             paises.Add(pais);
             Pais pais1 = new Pais();
             pais1.CodPais = 2;
             pais1.TxtDescripcion = "Colombia";
-            paises.Add(pais1);
+            paises.Add(pais1);*/
             ViewBag.Paises = paises;
 
             List<Provincia> provincias = new List<Provincia>();
-            Provincia provincia = new Provincia();
+            provincias = new ProvinciaManager().ConsultaProvincia();
+            /*Provincia provincia = new Provincia();
             provincia.CodPais = 1;
             provincia.CodProvincia = 1;
             provincia.TxtDescripcion = "Pichincha";
@@ -38,11 +40,11 @@ namespace EquiSeguros.Controllers
             provincia1.CodPais = 1;
             provincia1.CodProvincia = 2;
             provincia1.TxtDescripcion = "Guayas";
-            provincias.Add(provincia1);
+            provincias.Add(provincia1);*/
             ViewBag.Provincias = provincias;
+            
 
             TipoDirManager a = new TipoDirManager(); 
-
             List<TipoDireccionView> tiposDireccion = a.ConsultarTiposDoc();
             
             ViewBag.TipoDireccion = tiposDireccion;
@@ -58,9 +60,9 @@ namespace EquiSeguros.Controllers
         {
             if (ModelState.IsValid)
             {
-                //MarcaManager manager = new MarcaManager();
-                //manager.CrarMarca(marca);
-                return View();
+                DireccionManager manager = new DireccionManager();
+                manager.InsertarDireccion(direccion);
+                return View(direccion);
             }
             else
             {

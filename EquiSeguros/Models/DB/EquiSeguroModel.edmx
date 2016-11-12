@@ -244,7 +244,7 @@
             <PropertyRef Name="IdPersona" />
             <PropertyRef Name="CodTipoDir" />
           </Key>
-          <Property Name="IdPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="CodTipoDir" Type="Int32" Nullable="false" />
           <Property Name="CodPais" Type="Int32" Nullable="false" />
           <Property Name="CodProvincia" Type="Int32" Nullable="false" />
