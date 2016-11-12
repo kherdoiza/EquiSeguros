@@ -135,23 +135,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <EntityDeploy Include="Models\DB\EquiSeguroModel.edmx">
+    <EntityDeploy Include="Models\DB\EquiSegurosModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EquiSeguroModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>EquiSegurosModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DB\EquiSeguroModel.edmx.diagram">
-      <DependentUpon>EquiSeguroModel.edmx</DependentUpon>
+    <Content Include="Models\DB\EquiSegurosModel.edmx.diagram">
+      <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Models\DB\EquiSeguroModel.Context.tt">
+    <Content Include="Models\DB\EquiSegurosModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EquiSeguroModel.edmx</DependentUpon>
-      <LastGenOutput>EquiSeguroModel.Context.cs</LastGenOutput>
+      <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
+      <LastGenOutput>EquiSegurosModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DB\EquiSeguroModel.tt">
+    <Content Include="Models\DB\EquiSegurosModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EquiSeguroModel.edmx</DependentUpon>
-      <LastGenOutput>EquiSeguroModel.cs</LastGenOutput>
+      <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
+      <LastGenOutput>EquiSegurosModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -163,7 +163,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -177,48 +179,48 @@
     <Compile Include="Models\BussinesEntity\EstadoCivilView.cs" />
     <Compile Include="Models\BussinesEntity\PaisView.cs" />
     <Compile Include="Models\BussinesEntity\PersonaDir.cs" />
-    <Compile Include="Models\BussinesEntity\Provincia.cs" />
+    <Compile Include="Models\BussinesEntity\ProvinciaView.cs" />
     <Compile Include="Models\BussinesEntity\TipoDireccionView.cs" />
     <Compile Include="Models\BussinesEntity\TipoDoc.cs" />
     <Compile Include="Models\BussinesEntity\TipoPersonaView.cs" />
-    <Compile Include="Models\DB\EquiSeguroModel.Context.cs">
+    <Compile Include="Models\DB\EquiSegurosModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EquiSeguroModel.Context.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\EquiSeguroModel.cs">
+    <Compile Include="Models\DB\EquiSegurosModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\EquiSeguroModel.Designer.cs">
+    <Compile Include="Models\DB\EquiSegurosModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EquiSeguroModel.edmx</DependentUpon>
+      <DependentUpon>EquiSegurosModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\EstadoCivil.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\Pais.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\Persona.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\PersonaDir.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\Provincia.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\TipoDireccion.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\TipoDocumento.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB\TipoPersona.cs">
-      <DependentUpon>EquiSeguroModel.tt</DependentUpon>
+      <DependentUpon>EquiSegurosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntityManager\AseguradoManager.cs" />
     <Compile Include="Models\EntityManager\DireccionManager.cs" />

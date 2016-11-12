@@ -11,7 +11,7 @@ namespace EquiSeguros.Models.EntityManager
     {
         public List<EstadoCivilView> ConsultarEstadosCivil()
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 List<EstadoCivilView> resultado = new List<EstadoCivilView>();
                 List<EstadoCivil> lista = db.EstadoCivil.ToList();

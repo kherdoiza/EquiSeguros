@@ -8,9 +8,9 @@ namespace EquiSeguros.Models.EntityManager
 {
     public class ProvinciaManager
     {
-        public void InsertarProvincia(BussinesEntity.Provincia provincia)
+        public void InsertarProvincia(BussinesEntity.ProvinciaView provincia)
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 try
                 {
@@ -29,15 +29,15 @@ namespace EquiSeguros.Models.EntityManager
             }
         }// fin InsertarProvincia
 
-        public List<BussinesEntity.Provincia> ConsultaProvincia()
+        public List<BussinesEntity.ProvinciaView> ConsultaProvincia()
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
-                List<BussinesEntity.Provincia> resultado = new List<BussinesEntity.Provincia>();
+                List<BussinesEntity.ProvinciaView> resultado = new List<BussinesEntity.ProvinciaView>();
                 List<DB.Provincia> lista = db.Provincia.ToList();
                 lista.ForEach(x =>
                 {
-                    BussinesEntity.Provincia provincia = new BussinesEntity.Provincia();
+                    BussinesEntity.ProvinciaView provincia = new BussinesEntity.ProvinciaView();
                     provincia.CodPais = x.CodPais;
                     provincia.TxtDescripcion = x.TxtDescripcion;
                     resultado.Add(provincia);

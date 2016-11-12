@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="EquiSegurosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EquiSegurosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EstadoCivil">
           <Key>
             <PropertyRef Name="Id" />
@@ -38,7 +38,7 @@
             <PropertyRef Name="IdPersona" />
             <PropertyRef Name="CodTipoDir" />
           </Key>
-          <Property Name="IdPersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPersona" Type="int" Nullable="false" />
           <Property Name="CodTipoDir" Type="int" Nullable="false" />
           <Property Name="CodPais" Type="int" Nullable="false" />
           <Property Name="CodProvincia" Type="int" Nullable="false" />
@@ -80,37 +80,37 @@
         </EntityType>
         <Association Name="fk_Persona_EstadoCivil">
           <End Role="EstadoCivil" Type="Self.EstadoCivil" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EstadoCivil">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="EstadoCivil" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Persona_TipoDocumento">
           <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TipoDocumento">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="TipoDocumento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Persona_TipoPersona">
           <End Role="TipoPersona" Type="Self.TipoPersona" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TipoPersona">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="TipoPersona" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -202,7 +202,8 @@
             <End Role="Provincia" EntitySet="Provincia" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EquiSegurosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -219,7 +220,6 @@
           </Key>
           <Property Name="CodPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TxtDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Provincia" Relationship="Self.FK_Provincia_Pais" FromRole="Pais" ToRole="Provincia" />
         </EntityType>
         <EntityType Name="Persona">
           <Key>
@@ -237,14 +237,14 @@
           <NavigationProperty Name="EstadoCivil1" Relationship="Self.fk_Persona_EstadoCivil" FromRole="Persona" ToRole="EstadoCivil" />
           <NavigationProperty Name="TipoDocumento1" Relationship="Self.fk_Persona_TipoDocumento" FromRole="Persona" ToRole="TipoDocumento" />
           <NavigationProperty Name="TipoPersona1" Relationship="Self.fk_Persona_TipoPersona" FromRole="Persona" ToRole="TipoPersona" />
-          <NavigationProperty Name="PersonaDir" Relationship="EquiSegurosModel.FK_PersonaDir_Persona" FromRole="Persona" ToRole="PersonaDir" />
+          <NavigationProperty Name="PersonaDir" Relationship="Self.FK_PersonaDir_Persona" FromRole="Persona" ToRole="PersonaDir" />
         </EntityType>
         <EntityType Name="PersonaDir">
           <Key>
             <PropertyRef Name="IdPersona" />
             <PropertyRef Name="CodTipoDir" />
           </Key>
-          <Property Name="IdPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
           <Property Name="CodTipoDir" Type="Int32" Nullable="false" />
           <Property Name="CodPais" Type="Int32" Nullable="false" />
           <Property Name="CodProvincia" Type="Int32" Nullable="false" />
@@ -290,13 +290,13 @@
         </EntityType>
         <Association Name="fk_Persona_EstadoCivil">
           <End Role="EstadoCivil" Type="Self.EstadoCivil" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EstadoCivil">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="EstadoCivil" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -314,25 +314,25 @@
         </Association>
         <Association Name="fk_Persona_TipoDocumento">
           <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TipoDocumento">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="TipoDocumento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Persona_TipoPersona">
           <End Role="TipoPersona" Type="Self.TipoPersona" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TipoPersona">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="TipoPersona" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -374,7 +374,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EquiSegurosEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EstadoCivil" EntityType="Self.EstadoCivil" />
           <EntitySet Name="Pais" EntityType="Self.Pais" />
           <EntitySet Name="Persona" EntityType="Self.Persona" />
@@ -417,7 +417,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EquiSegurosModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="EquiSegurosModelStoreContainer" CdmEntityContainer="EquiSegurosEntities">
           <EntitySetMapping Name="EstadoCivil">
             <EntityTypeMapping TypeName="EquiSegurosModel.EstadoCivil">
               <MappingFragment StoreEntitySet="EstadoCivil">

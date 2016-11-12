@@ -17,7 +17,7 @@ namespace EquiSeguros.Controllers
             Asegurado asegurado = new Asegurado();
             asegurado.Id = 1;
 
-            List<Pais> paises = new List<Pais>();
+            List<PaisView> paises = new List<PaisView>();
             paises = new PaisManager().ConsultaPais();
             /*Pais pais = new Pais();
             pais.CodPais = 1;
@@ -29,7 +29,7 @@ namespace EquiSeguros.Controllers
             paises.Add(pais1);*/
             ViewBag.Paises = paises;
 
-            List<Provincia> provincias = new List<Provincia>();
+            List<ProvinciaView> provincias = new List<ProvinciaView>();
             provincias = new ProvinciaManager().ConsultaProvincia();
             /*Provincia provincia = new Provincia();
             provincia.CodPais = 1;

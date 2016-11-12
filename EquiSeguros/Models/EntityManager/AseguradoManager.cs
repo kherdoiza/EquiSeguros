@@ -11,7 +11,7 @@ namespace EquiSeguros.Models.EntityManager
     {
         public void CrearAsegurado(Asegurado asegurado)
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 DB.Persona persona = new DB.Persona();
                 persona.Nombre = asegurado.Nombres;
@@ -29,7 +29,7 @@ namespace EquiSeguros.Models.EntityManager
 
         public List<Asegurado> ConsultaAsegurado()
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 List<Asegurado> resultado = new List<Asegurado>();
                 List<DB.Persona> listaPersona = db.Persona.ToList();

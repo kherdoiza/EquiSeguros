@@ -9,9 +9,9 @@ namespace EquiSeguros.Models.EntityManager
 {
     public class PaisManager
     {
-        public void InsertarPais(BussinesEntity.Pais pais)
+        public void InsertarPais(BussinesEntity.PaisView pais)
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 try
                 {
@@ -29,15 +29,15 @@ namespace EquiSeguros.Models.EntityManager
             }
         }// fin InsertarPais
 
-        public List<BussinesEntity.Pais> ConsultaPais()
+        public List<BussinesEntity.PaisView> ConsultaPais()
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
-                List<BussinesEntity.Pais> resultado = new List<BussinesEntity.Pais>();
+                List<BussinesEntity.PaisView> resultado = new List<BussinesEntity.PaisView>();
                 List<DB.Pais> lista = db.Pais.ToList();
                 lista.ForEach(x =>
                 {
-                    BussinesEntity.Pais pais = new BussinesEntity.Pais();
+                    BussinesEntity.PaisView pais = new BussinesEntity.PaisView();
                     pais.CodPais = x.CodPais;
                     pais.TxtDescripcion = x.TxtDescripcion;
                     resultado.Add(pais);

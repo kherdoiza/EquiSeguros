@@ -12,7 +12,7 @@ namespace EquiSeguros.Models.EntityManager
 
         public void InsertarDireccion(Direccion direccion)
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 try
                 {

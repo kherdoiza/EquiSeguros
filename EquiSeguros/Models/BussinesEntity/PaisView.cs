@@ -5,7 +5,7 @@ using System.Web;
 
 namespace EquiSeguros.Models.BussinesEntity
 {
-    public class Pais
+    public class PaisView
     {
         public int CodPais { get; set; }
         public string TxtDescripcion { get; set; }

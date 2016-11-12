@@ -11,7 +11,7 @@ namespace EquiSeguros.Models.EntityManager
 
         public void InsertarTiposDoc(BussinesEntity.TipoDireccionView tipDir)
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 try
                 {
@@ -60,7 +60,7 @@ namespace EquiSeguros.Models.EntityManager
             // comentado para extraer de la bdd BV
              */
 
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 List<BussinesEntity.TipoDireccionView> resultado = new List<BussinesEntity.TipoDireccionView>();
                 List<DB.TipoDireccion> lista = db.TipoDireccion.ToList();

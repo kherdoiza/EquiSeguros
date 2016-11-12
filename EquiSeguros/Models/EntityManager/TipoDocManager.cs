@@ -11,7 +11,7 @@ namespace EquiSeguros.Models.EntityManager
     {
         public List<TipoDoc> ConsultarTiposDoc()
         {
-            using (Entities db = new Entities())
+            using (EquiSegurosEntities db = new EquiSegurosEntities())
             {
                 List<TipoDoc> resultado = new List<TipoDoc>();
                 List<TipoDocumento> lista = db.TipoDocumento.ToList();
