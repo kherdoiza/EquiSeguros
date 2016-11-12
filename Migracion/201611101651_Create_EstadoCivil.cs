@@ -17,15 +17,15 @@ namespace Migracion
                 .WithColumn("Descripcion").AsString(100).NotNullable();
 
             Create.ForeignKey("fk_Persona_TipoPersona")
-                .FromTable("Persona").ForeignColumn("Id")
+                .FromTable("Persona").ForeignColumn("TipoPersona")
                 .ToTable("TipoPersona").PrimaryColumn("Id");
 
             Create.ForeignKey("fk_Persona_TipoDocumento")
-                .FromTable("Persona").ForeignColumn("Id")
+                .FromTable("Persona").ForeignColumn("TipoDocumento")
                 .ToTable("TipoDocumento").PrimaryColumn("Id");
 
             Create.ForeignKey("fk_Persona_EstadoCivil")
-                .FromTable("Persona").ForeignColumn("Id")
+                .FromTable("Persona").ForeignColumn("EstadoCivil")
                 .ToTable("EstadoCivil").PrimaryColumn("Id");
         }
 
