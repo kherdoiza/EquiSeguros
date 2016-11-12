@@ -32,18 +32,22 @@ namespace EquiSeguros.Controllers
         }
 
         [HttpPost]
-        public ViewResult AseguradoForm(Asegurado asegurado)
+        public ActionResult AseguradoForm(Asegurado asegurado)
         {
             if (ModelState.IsValid)
             {
-                //AseguradoManager manager = new AseguradoManager();
+                AseguradoManager manager = new AseguradoManager();
                 //manager.CrearAsegurado(asegurado);
-                return View("DirPrueba");
+                asegurado.Id = 1;
+                asegurado.Nombres = "Karla";
+
+                //return View("../Direccion/DireccionForm");
+                return RedirectToAction("DireccionForm", "Direccion", new { asegurado = asegurado });
 
             }
             else
             {
-                return View("DirPrueba");
+                return RedirectToAction("DireccionForm", "Direccion", new { asegurado = asegurado });
             }
         }
 
